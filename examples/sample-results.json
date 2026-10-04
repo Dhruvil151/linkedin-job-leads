@@ -1,0 +1,36 @@
+[
+  {
+    "id": "fictional-1",
+    "type": "hiring",
+    "score": 9,
+    "reason": "Illustrative: Node.js, Express, and SQL align with the fictional candidate.",
+    "experience_required": "junior",
+    "key_skills": [
+      "Node.js",
+      "Express",
+      "SQL"
+    ],
+    "apply_email": "jobs@example.com"
+  },
+  {
+    "id": "fictional-2",
+    "type": "hiring",
+    "score": 2,
+    "reason": "Illustrative: different stack and seniority.",
+    "experience_required": "6+ years",
+    "key_skills": [
+      "Swift",
+      "iOS"
+    ],
+    "apply_email": null
+  },
+  {
+    "id": "fictional-3",
+    "type": "seeker",
+    "score": 0,
+    "reason": "Illustrative: seeking work, not advertising a vacancy.",
+    "experience_required": "not specified",
+    "key_skills": [],
+    "apply_email": null
+  }
+]
