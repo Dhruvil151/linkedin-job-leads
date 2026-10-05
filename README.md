@@ -44,6 +44,20 @@ The daily workflow persists its state in SQLite, making interrupted scoring resu
 
 See the [technical guide](docs/TECHNICAL_GUIDE.md) for setup details, architecture, and implementation boundaries.
 
+## Engineering decisions
+
+### Persist progress between runs
+
+SQLite records candidates, scoring progress, deduplication, and delivery state. An interrupted run can resume and avoid treating every post as new.
+
+### Separate ranking from verification
+
+A model ranks post relevance, while original post content remains the evidence. Scores help prioritize manual review; they do not prove that a vacancy exists.
+
+### Make delivery optional
+
+Local reporting can run without Telegram. Users can inspect results before enabling delivery, and credentials remain local.
+
 ## Checks and evidence
 
 ```sh
@@ -58,3 +72,7 @@ The [publication validation report](VALIDATION.md) records earlier checks and th
 
 Personal automation, not an official LinkedIn integration. Selectors and provider access can change. Model scores are suggestions and do not verify that a role is available or suitable.
 
+
+## License
+
+Original project code and documentation are available under the [MIT License](LICENSE). Third-party dependencies and assets retain their own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md).
